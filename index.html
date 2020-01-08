@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href = "main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Internly</title>
+</head>
+<body>
+    <header>
+        <div class = "header-left">
+            <img class = "logo" id = "logoBlack" src = "assets/logo.png">
+            <img class = "logo" id = "logoWhite" src = "assets/logoWhite.png">
+        </div>
+        <div class = "header-right">
+            <div class="burger" onclick="burgerToggle(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>For Students</li>
+                <li>For Businesses</li>
+            </ul>
+        </div>
+    </header>
+    <section id = "lander">
+            <div class = "lander-text">
+                <h1>Internship applications made simple.</h1>
+                <h2>One Application. Access to multiple companies.</h2>
+                <div class = "subscribe-form">
+                    <div class = "btn btn-pink">
+                        <h6>Get Early Access</h6>
+                    </div>
+                    <form class = "form-email form-email-dark">
+                        <input placeholder="Enter your university email">
+                    </form>
+                </div>
+            </div>
+            <div class = "process">
+                <div class = "process-card">
+                    <div class = "process-card-container">
+                        <img src = "assets/Icon1.png">
+                        <!--<h4>Step 1</h4>-->
+                        <h3>Sign Up<br></h3>
+                        <p>Fill in all your personal information, work experience etc. You'll only ever have to do this once!</p>
+                    </div>
+                    <h2 class = "process-card-num">1</h2>
+                </div>
+                <div class = "process-card">
+                    <div class = "process-card-container">
+                        <img src = "assets/Icon2.png">
+                        <!--<h4>Step 2</h4>-->
+                        <h3>Select Industries and Roles</h3>
+                        <p>Apply to industries and roles and we'll connect you to all companies that offer internships in those areas.</p>
+                    </div>
+                    <h2 class = "process-card-num">2</h2>
+                </div>
+                <div class = "process-card">
+                    <div class = "process-card-container">
+                        <img src = "assets/Icon1.png">
+                        <!--<h4>Step 3</h4>-->
+                        <h3>Complete an Assessment</h3>
+                        <p>Complete an assessment tailored to your chosen roles and industries. You only ever have to do this once!</p>
+                    </div>
+                    <h2 class = "process-card-num">3</h2>
+                </div>
+                
+                <div class = "process-card">
+                    <div class = "process-card-container">
+                        <!--<h4>Step 4</h4>-->
+                        <img src = "assets/Icon1.png">
+                        <h3>Let Companies Compete for You</h3>
+                        <p>Sit back, relax, and wait for the interview offers to roll in.</p>
+                    </div>
+                    <h2 class = "process-card-num">4</h2>
+                </div>
+            </div>
+    </section>
+    <section id = "early-access">
+        <div class = "background-wrapper">
+            <div class = "vid" style = "left:20%; top:5%; transform: scale(0.8);">
+                <video class = "coin" autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/coin1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "vid" style = "left:52%; top:20%; transform: scale(1.1);">
+                <video class = "coin" autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/coin2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "vid" style = "top:50%; left:20%; transform: scale(1);">
+                <video class = "coin" autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/coin3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "vid" style = "top:65%; left:65%; transform: scale(0.9);">
+                <video class = "coin" autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/coin4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class = "early-inner-wrapper">
+            <h1><span class = "get">Get</span><br>early<br><span class = "access">access!</span></h1>
+            <p>Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
+            <div class = "subscribe-form">
+                <div class = "btn btn-white">
+                    <h6>Submit</h6>
+                </div>
+                <form class = "form-email">
+                    <input placeholder="Enter your university email">
+                </form>
+            </div>
+        </div>            
+    </section>
+    <section id = "descs">
+        <div class = "desc" id = "desc1">
+            <div class = "desc-media">
+                <video autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/application.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "desc-text">
+                <h2>Single Application</h2>
+                <p>Students spend countless hours, applying to a vast array of companies in the hopes to secure themselves and internship. We aim to provide a single process for applicants, so they only need to apply once, and can focus on their studies.</p>
+            </div>   
+        </div>
+        <div class = "desc">
+            <div class = "desc-media">
+                <video autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/company.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "desc-text">
+                <h2>Intelligence Layer</h2>
+                <p>The application will sort through students, and competitively sort them, so different abilities of students are grouped together. The employers will then be able to seive through applicants and see the quality of student they are looking for.</p>
+            </div>   
+        </div>
+        <div class = "desc">
+            <div class = "desc-media">
+                <video autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/company.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "desc-text">
+                <h2>Exclusive Companies</h2>
+                <p>We are actively seeking for companies across the UK to exclusively use our application system. Therefore these opportunies cannot be found elsewhere.</p>
+            </div>   
+        </div>
+        <div class = "desc" id = "descn">
+            <div class = "desc-media">
+                <video autoplay loop muted playsinline preload="none">
+                    <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
+                    <source src="assets/company.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class = "desc-text">
+                <h2>Exclusive Universities</h2>
+                <p>Further, we are seeking exclusive deals with world-class universities, allowing the companies to choose only the best students across the country.</p>
+            </div>   
+        </div>
+    </section>
+    <section id = "recruit">
+        <div class = "recruit-inner">
+            <h3>Are you looking to recruit interns?</h3>
+            <div class = "recruit-contact">
+                <p>Contact us to find out more</p>
+                <div class = "btn btn-blue">
+                    <h6>Start Now</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id = "footer">
+        <div class = "footer-wrapper">
+            <img src = "assets/logoWhite.png">
+            <div class = "footer-contact">
+                <h3>Be brave, give us a wave!</h3>
+                <p>Whether you’re a student or a company looking to get involved or are simply interested in what we’re up to, please feel free to contact us!</p>
+                <div class = "socials">
+                    <i class="fab fa-2x fa-facebook-f"></i>
+                    <i class="fab fa-2x fa-instagram"></i>
+                    <h4>support@internly.co.uk</h4>
+                </div>
+              
+            </div>
+            <div class = "footer-navigation">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href = "#">Home</a></li>
+                    <li><a href = "#">For Students</a></li>
+                    <li><a href = "#">For Businesses</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script>
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 200) {
+            $("header").addClass("header-active");
+        } else {
+            $("header").removeClass("header-active");
+        }
+    });
+    function burgerToggle(x) {
+        x.classList.toggle("burger-active");
+        //document.getElementById("mobile-navigation-overlay").style.css("top", "0px"); 
+    }
+
+</script>
