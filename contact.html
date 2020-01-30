@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class = "header-left">
-            <img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png">
-            <img class = "logo" id = "logoWhite" src = "assets/logoWhite.png">
+            <a href = "index.html"><img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png"></a>
+            <a href = "index.html"><img class = "logo" id = "logoWhite" src = "assets/logoWhite.png"></a>
         </div>
         <div class = "header-right">
             <div class="burger" onclick="burgerToggle(this)">
@@ -23,17 +23,17 @@
                 <div class="bar3"></div>
             </div>
             <ul>
-                <li>Home</li>
-                <li>For Students</li>
-                <li><a hred ="../businesses.html">Contact</a></li>
+                <li><a href = "index.html">Home</a href></li>
+                <li><a href = "">For Students</a></li>
+                <li><a href ="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
     <section id = "mobile-navigation-overlay" class = "mobile-navigation-overlay">
         <ul>
-            <li><a href = "#">Home</a></li>
+            <li><a href = "index.html">Home</a></li>
             <li><a href = "#">For Students</a></li>
-            <li><a href = "#">For Businesses</a></li>
+            <li><a href = "contact.html">Contact</a></li>
         </ul>
     </section>
     <section id = "contact">
@@ -51,6 +51,10 @@
                 <input type = "text" id = "company-name" placeholder = "Company Name">
                 <textarea id = "message" name = "message" placeholder = "How can we help you?*"></textarea>
             </form>
+            <div class = "btn btn-pink">
+                <h6>Send Message</h6>
+            </div>
+            <div class = "spacer"></div>
         </div>
     </section>
     <section id = "footer">
@@ -64,16 +68,24 @@
                     <i class="fab fa-2x fa-instagram"></i>
                     <h4>support@internly.co.uk</h4>
                 </div>
-              
             </div>
             <div class = "footer-navigation">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href = "#">Home</a></li>
+                    <li><a href = "index.html">Home</a></li>
                     <li><a href = "#">For Students</a></li>
-                    <li><a href = "#">For Businesses</a></li>
+                    <li><a href = "contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </section>
 </body>
+<script>
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 200) {
+            $("header").addClass("header-active");
+        } else {
+            $("header").removeClass("header-active");
+        }
+    });
+</script>

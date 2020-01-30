@@ -116,14 +116,17 @@ header{
         position: relative;
         display: flex;
         align-items: center;
-        .logo{
-            height:17px;
-            transition: 0.3s;
+        a{
             position: absolute;
             transform-origin: left center;
-        }
-        #logoWhite{
-            opacity: 0;
+            height:17px;
+
+            .logo{
+                transition: 0.3s;
+            }
+            #logoWhite{
+                opacity: 0;
+            }
         }
     }
     .header-right{
@@ -828,7 +831,7 @@ header{
     display: grid;
     padding-left: 2em;
     padding-right:2em;
-    padding-top:80px;
+    padding-top:100px;
     //grid-template-columns: 1fr 1fr;
     .contact-left{
         margin-bottom: 50px;
@@ -839,6 +842,7 @@ header{
         p{
             font-size: 14px;
             line-height:20px;
+            margin-bottom:20px;
         }
     }
     .contact-right{
@@ -861,7 +865,28 @@ header{
             }
             textarea{
                 height:100px;
+                margin-bottom:20px;
             }
+        }
+        .spacer{
+            margin-bottom: 40px;
+        }
+    }
+    @media (min-width:1024px){
+        padding-left: 100px;
+        padding-right:100px;
+        padding-top: 150px;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        min-height: 90vh;
+        //align-content: center;
+        
+        h2{
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+        .contact-left,.contact-right{
+            //background-color: red;
         }
     }
 }

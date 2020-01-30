@@ -106,17 +106,18 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    header .header-left .logo {
-      height: 17px;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
+    header .header-left a {
       position: absolute;
       -webkit-transform-origin: left center;
       -ms-transform-origin: left center;
-      transform-origin: left center; }
-    header .header-left #logoWhite {
-      opacity: 0; }
+      transform-origin: left center;
+      height: 17px; }
+      header .header-left a .logo {
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+      header .header-left a #logoWhite {
+        opacity: 0; }
   header .header-right {
     padding-right: 25px;
     justify-self: end;
@@ -777,14 +778,15 @@ header {
   display: grid;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 80px; }
+  padding-top: 100px; }
   #contact .contact-left {
     margin-bottom: 50px; }
     #contact .contact-left h2 {
       font-weight: 600; }
     #contact .contact-left p {
       font-size: 14px;
-      line-height: 20px; }
+      line-height: 20px;
+      margin-bottom: 20px; }
   #contact .contact-right h3 {
     font-weight: 300;
     margin-bottom: 10px; }
@@ -798,4 +800,19 @@ header {
   #contact .contact-right form input::-webkit-input-placeholder {
     margin-left: 10px; }
   #contact .contact-right form textarea {
-    height: 100px; }
+    height: 100px;
+    margin-bottom: 20px; }
+  #contact .contact-right .spacer {
+    margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    #contact {
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 150px;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+      min-height: 90vh; }
+      #contact h2 {
+        font-size: 70px;
+        margin-bottom: 20px; } }
