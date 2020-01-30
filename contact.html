@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href = "main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <title>Internly</title>
+</head>
+<body>
+    <header>
+        <div class = "header-left">
+            <img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png">
+            <img class = "logo" id = "logoWhite" src = "assets/logoWhite.png">
+        </div>
+        <div class = "header-right">
+            <div class="burger" onclick="burgerToggle(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>For Students</li>
+                <li><a hred ="../businesses.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id = "mobile-navigation-overlay" class = "mobile-navigation-overlay">
+        <ul>
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#">For Students</a></li>
+            <li><a href = "#">For Businesses</a></li>
+        </ul>
+    </section>
+    <section id = "contact">
+        <div class = "contact-left">
+            <h2>Contact Us</h2>
+            <p>Whether you're a business wanted to get involed or ask a question, a students who wants to find out more, or you simply wanted to get to know us better, please contact us, we're always happy to discuss!</p>
+            <h5>hello@internly.co.uk</h5>
+        </div>
+        <div class = "contact-right">
+            <h3>Send Us a Message</h3>
+            <form>
+                <input type = "text" id = "firstname" placeholder = "First Name *">
+                <input type = "text" id = "surname" placeholder = "Surname *">
+                <input type = "text" id = "email" placeholder = "Email *">
+                <input type = "text" id = "company-name" placeholder = "Company Name">
+                <textarea id = "message" name = "message" placeholder = "How can we help you?*"></textarea>
+            </form>
+        </div>
+    </section>
+    <section id = "footer">
+        <div class = "footer-wrapper">
+            <img src = "assets/LogoPurple.png">
+            <div class = "footer-contact">
+                <h3>Be brave, give us a wave!</h3>
+                <p>Whether you’re a student or a company looking to get involved or are simply interested in what we’re up to, please feel free to contact us!</p>
+                <div class = "socials">
+                    <i class="fab fa-2x fa-facebook-f"></i>
+                    <i class="fab fa-2x fa-instagram"></i>
+                    <h4>support@internly.co.uk</h4>
+                </div>
+              
+            </div>
+            <div class = "footer-navigation">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href = "#">Home</a></li>
+                    <li><a href = "#">For Students</a></li>
+                    <li><a href = "#">For Businesses</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>

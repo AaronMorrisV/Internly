@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href = "main.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel = "stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
@@ -13,7 +14,7 @@
 <body>
     <header>
         <div class = "header-left">
-            <img class = "logo" id = "logoBlack" src = "assets/logoPink.png">
+            <img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png">
             <img class = "logo" id = "logoWhite" src = "assets/logoWhite.png">
         </div>
         <div class = "header-right">
@@ -23,12 +24,19 @@
                 <div class="bar3"></div>
             </div>
             <ul>
-                <li>Home</li>
-                <li>For Students</li>
-                <li>For Businesses</li>
+                <li><a href = "index.html">Home</a href></li>
+                <li><a href = "">For Students</a></li>
+                <li><a href ="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
+    <section id = "mobile-navigation-overlay" class = "mobile-navigation-overlay">
+        <ul>
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#">For Students</a></li>
+            <li><a href = "#">For Businesses</a></li>
+        </ul>
+    </section>
     <section id = "lander">
             <div class = "lander-text">
                 <h1>Internship applications made simple.</h1>
@@ -83,6 +91,7 @@
             </div>
     </section>
     <section id = "early-access">
+        <!--
         <div class = "background-wrapper">
             <div class = "vid" style = "left:20%; top:5%; transform: scale(0.8);">
                 <video class = "coin" autoplay loop muted playsinline preload="none">
@@ -108,11 +117,11 @@
                     <source src="assets/coin4.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
-        <div class = "early-inner-wrapper">
+        </div>-->
+        <div class = "early-inner-wrapper" id = "early-inner-wrapper-1">
             <h1><span class = "get">Get</span><br>early<br><span class = "access">access!</span></h1>
             <p>Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
-            <div class = "subscribe-form">
+            <div class = "subscribe-form" onclick = "formSubmit()">
                 <div class = "btn btn-white">
                     <h6>Submit</h6>
                 </div>
@@ -120,7 +129,10 @@
                     <input placeholder="Enter your university email">
                 </form>
             </div>
-        </div>            
+        </div>
+        <div class = "early-inner-wrapper" id = "early-inner-wrapper-2">
+            <p>Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
+        </div>                 
     </section>
     <section id = "descs">
         <div class = "desc" id = "desc1">
@@ -185,7 +197,7 @@
     </section>
     <section id = "footer">
         <div class = "footer-wrapper">
-            <img src = "assets/logoWhite.png">
+            <img src = "assets/LogoPurple.png">
             <div class = "footer-contact">
                 <h3>Be brave, give us a wave!</h3>
                 <p>Whether you’re a student or a company looking to get involved or are simply interested in what we’re up to, please feel free to contact us!</p>
@@ -218,7 +230,14 @@
     });
     function burgerToggle(x) {
         x.classList.toggle("burger-active");
+        $("#mobile-navigation-overlay").toggleClass("mobi");
+        //$("#mobile-navigation-overlay").css("opacity","1");
+        console.log("X");
         //document.getElementById("mobile-navigation-overlay").style.css("top", "0px"); 
     }
-
+    function formSubmit(){
+        //if this.child[1].child[0] != empty
+        $("#early-inner-wrapper-1").css("opacity", "0");
+        $("#early-inner-wrapper-2").css("opacity", "1");
+    }
 </script>
