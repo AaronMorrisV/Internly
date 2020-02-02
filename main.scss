@@ -1,17 +1,17 @@
 $dark: #151515; //#151515
 $grey: #202020;
 $pink: #a11563;
-$dark-pink: #bb5693;
+$light-pink: #bb5693;
 $off-white: #f1f3f4;
 //320,720,1024
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     //font-family: 'Poppins', sans-serif;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
-}
-body{
 }
 h1{
     font-size: 35px;
@@ -46,7 +46,7 @@ p{
         background-color: $pink;
         color:white;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 36px;
         border-radius: 5px;
     }
@@ -122,6 +122,7 @@ header{
             height:17px;
 
             .logo{
+                height:17px;
                 transition: 0.3s;
             }
             #logoWhite{
@@ -222,39 +223,125 @@ header{
     .mobi{
         background-color: red;
     }
-    background-color: $dark;
-    height:100vh;
+    pointer-events: none;
+    
+    //background-color: $dark;
+    height:100%;
     width:100vw;
-    position: fixed;
-    //top:0;    
-    left:0;
+    overflow-x: hidden;
     opacity: 0;
-    display: none;
-    transition:0.3s;
-    overflow: none;
-    z-index:-5;
+    position: fixed;
+    //transition:0.3s;
     display: grid;
-    align-items: center;
-    justify-items: center;
-    ul{
-        padding:0;
-        li{
-            list-style: none;
-            a{
-                text-decoration: none;
-                color:white;
-                font-size: 40px;
-                line-height: 60px;
+    //grid-template-columns: 1fr 1fr;
+    //align-items: center;
+    //justify-items: center;
+    z-index: 5;
+    .mobile-nav-left{
+        background-color: $dark;
+        height:0%;
+        transition:0.7s cubic-bezier(.94,.09,.37,.78);
+        transition-delay: 0.15s;
+        top:0;
+        position: absolute;
+        width:50%;
+        padding-right: 4px;
+        ul{
+            padding:0;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color:white;
+                    font-size: 40px;
+                    line-height: 60px;
+                    transition-delay: 2s;
+                    transition:0.3s;
+                }
             }
         }
     }
-
+    .mobile-nav-right{
+        background-color: $dark;
+        color:white;
+        height:0%;
+        top:0;
+        right:0;
+        position: absolute;
+        transition:0.7s cubic-bezier(.94,.09,.37,.78);
+        width:50%;
+        .socials{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 1em;
+            i{
+                //margin-right:20px;
+                font-size: 30px;
+                cursor: pointer;
+                opacity:0.6;
+                transition:0.3s;
+            }
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+                opacity:0.6;
+                transition:0.3s;
+                grid-column: 1/3;
+                
+            }
+        }
+    }
 }
-
 .mobile-navigation-overlay-active{
-    background-color: red;
-    opacity:1;
+    opacity: 1;
 
+    pointer-events: auto;
+    .mobile-nav-left,.mobile-nav-right{
+        height:100%;
+    }
+}
+#header-subscribe-form{
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    top:12px;
+    z-index:11;
+    //pointer-events: none;
+    transition: 0.3s;
+    .btn{
+        h6{
+            padding:10px 10px;
+            a{
+                text-decoration:none;
+                color:$dark;
+            }
+        }
+    }
+    .form-email{
+        width:300px;
+        input{
+            width:100%;
+        }
+    }
+    @media(max-width: 920px){
+        display: none;
+    }
+}
+.header-subscribe-form-active{
+    opacity: 1;
+    @media(max-width: 920px){
+        display: none;
+    }
 }
 #lander{
     min-height:100vh;
@@ -333,8 +420,9 @@ header{
                 flex-direction:column;
                 text-align: center;
                 img{
-                    height:100px;
+                    height:80px;
                     display: block;
+                    margin-bottom:10px;
                     margin-left: auto;
                     margin-right: auto;
                     transition:0.3s;
@@ -466,7 +554,113 @@ header{
         }
     }
 
-    
+    //Mouse stuff
+    @-webkit-keyframes scroll-ani {
+        0% {
+          opacity: 1;
+          top: 29%;
+        }
+        15% {
+          opacity: 1;
+          top: 50%;
+        }
+        50% {
+          opacity: 0;
+          top: 50%;
+        }
+        100% {
+          opacity: 0;
+          top: 29%;
+        }
+      }
+      
+      @-moz-keyframes scroll-ani {
+        0% {
+          opacity: 1;
+          top: 29%;
+        }
+        15% {
+          opacity: 1;
+          top: 50%;
+        }
+        50% {
+          opacity: 0;
+          top: 50%;
+        }
+        100% {
+          opacity: 0;
+          top: 29%;
+        }
+      }
+      
+      @keyframes scroll-ani {
+        0% {
+          opacity: 1;
+          top: 29%;
+        }
+        15% {
+          opacity: 1;
+          top: 50%;
+        }
+        50% {
+          opacity: 0;
+          top: 50%;
+        }
+        100% {
+          opacity: 0;
+          top: 29%;
+        }
+      }
+      
+      // Mouse & Message Styles
+      
+      // The Scroll Link
+      .mouse-scroll {
+        display: inline-block;
+        line-height: 18px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #7F8C8D;
+        color: #FFF;
+        font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: 2px;
+        margin-top: 10%;
+        text-decoration: none;
+        overflow: hidden;
+        
+        // The Mouse
+        .mouse {
+          position: absolute;
+          bottom:20px;
+          right:40px;
+          display: block;
+          width: 23px;
+          height: 36px;
+          margin: 0 auto 20px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          border: 2px solid #000;
+          border-radius: 23px;
+          opacity: 0.5;
+          // Scroll Indicator
+          .mouse-movement { 
+            position: absolute;
+            display: block;
+            top: 29%;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            margin: -2px 0 0 -2px;
+            background: #000;
+            border-radius: 50%;
+            -webkit-animation: scroll-ani 4s linear infinite;
+            -moz-animation: scroll-ani 4s linear infinite;
+            animation: scroll-ani 4s linear infinite;
+          }
+        }
+      }
+      //Mouse stuff ends
 }
 #early-access{
     height:100vh;
@@ -493,7 +687,7 @@ header{
         }
         @media(min-width:720px){
             h1:hover{
-                color:$dark-pink;
+                color:$light-pink;
                 font-size:100px;
             }
             .get, .access{
@@ -525,9 +719,99 @@ header{
     #early-inner-wrapper-2{
         transition-delay: opacity 0.5s;
         transition: opacity 0.5s;
-
-        //display: none;
         opacity:0;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:80%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        p{
+            color:white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .industries{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            width:100%;
+            margin-bottom: 30px;
+            @media(min-width:700px){
+                width:400px;
+            }
+        }
+        .checkbox-container {
+            position: relative;
+            padding: 5px 0px;
+            width:100%;
+            //padding-left: 30px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: $light-pink;
+            border-radius: 5px;
+            transition: 0.3s;
+            color:white;
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                padding-left: -500px;
+            }
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                top:50%;
+                transform:translateY(-50%);
+                //margin-left: 5px;
+            }
+        }
+        .checkbox-container:hover{
+            background-color: $pink;
+        }
+        /*
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }*/
+        
+        
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .checkbox-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+        
+        /* Style the checkmark/indicator */
+        .checkbox-container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
     }
     .background-wrapper{
         position:absolute;
@@ -833,6 +1117,7 @@ header{
     padding-right:2em;
     padding-top:100px;
     //grid-template-columns: 1fr 1fr;
+    background-color: $off-white;
     .contact-left{
         margin-bottom: 50px;
         h2{
@@ -855,6 +1140,7 @@ header{
                 width:100%;
                 border: none;
                 border-bottom: 1px solid $dark;
+                background-color: $off-white;
             }
             input{
                 height:30px;
@@ -884,9 +1170,6 @@ header{
         h2{
             font-size: 70px;
             margin-bottom: 20px;
-        }
-        .contact-left,.contact-right{
-            //background-color: red;
         }
     }
 }
