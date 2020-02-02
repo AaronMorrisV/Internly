@@ -85,6 +85,40 @@ p {
     background-color: rgba(0, 0, 0, 0.05);
     color: black; }
 
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both; }
+
+.fadeInUp {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp; }
+
 header {
   display: -ms-grid;
   display: grid;
@@ -1085,3 +1119,8 @@ header {
       #contact h2 {
         font-size: 70px;
         margin-bottom: 20px; } }
+
+body[data-aos-easing="my-easing"] [data-aos], [data-aos][data-aos][data-aos-easing="my-easing"] {
+  -webkit-transition-timing-function: cubic-bezier(0.94, 0.09, 0.37, 0.78);
+  -o-transition-timing-function: cubic-bezier(0.94, 0.09, 0.37, 0.78);
+  transition-timing-function: cubic-bezier(0.94, 0.09, 0.37, 0.78); }

@@ -9,16 +9,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Internly</title>
 </head>
 <body>
     <header>
         <div class = "header-left">
-            <a href = "index.html"><img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png"></a>
+            <a href = "index.html" ><img class = "logo" id = "logoBlack" src = "assets/LogoPurple.png"></a>
             <a href = "index.html"><img class = "logo" id = "logoWhite" src = "assets/logoWhite.png"></a>
         </div>
         <div class = "header-right">
-            <div class="burger" onclick="burgerToggle(this)">
+            <div class="burger" id = "burger" onclick="burgerToggle(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -62,9 +65,9 @@
             </span>
         </a>
         <div class = "lander-text">
-            <h1>Internship applications made simple.</h1>
-            <h2>One Application. Access to multiple companies.</h2>
-            <div class = "subscribe-form">
+            <h1 data-aos="fade">Internship applications made simple.</h1>
+            <h2 data-aos="fade" data-aos-delay="500">One Application. Access to multiple companies.</h2>
+            <div class = "subscribe-form" data-aos="fade" data-aos-delay="1000">
                 <div class = "btn btn-pink">
                     <h6>Get Early Access</h6>
                 </div>
@@ -74,7 +77,7 @@
             </div>
         </div>
         <div class = "process">
-            <div class = "process-card">
+            <div class = "process-card" data-aos="fade-up" data-aos-duration="3000">
                 <div class = "process-card-container">
                     <img src = "assets/avatarBust.png">
                     <!--<h4>Step 1</h4>-->
@@ -83,7 +86,7 @@
                 </div>
                 <h2 class = "process-card-num">1</h2>
             </div>
-            <div class = "process-card">
+            <div class = "process-card" data-aos="fade-up">
                 <div class = "process-card-container">
                     <img src = "assets/checkboxes.png">
                     <!--<h4>Step 2</h4>-->
@@ -92,7 +95,7 @@
                 </div>
                 <h2 class = "process-card-num">2</h2>
             </div>
-            <div class = "process-card">
+            <div class = "process-card" data-aos="fade-up">
                 <div class = "process-card-container">
                     <img src = "assets/assessment.png">
                     <!--<h4>Step 3</h4>-->
@@ -102,7 +105,7 @@
                 <h2 class = "process-card-num">3</h2>
             </div>
             
-            <div class = "process-card">
+            <div class = "process-card" data-aos="fade-up">
                 <div class = "process-card-container">
                     <!--<h4>Step 4</h4>-->
                     <img src = "assets/competition.png">
@@ -115,51 +118,51 @@
     </section>
     <section id = "descs">
         <div class = "desc" id = "desc1">
-            <div class = "desc-media">
+            <div class = "desc-media" data-aos="fade" data-aos-delay="600">
                 <video autoplay loop muted playsinline preload="none">
                     <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
                     <source src="assets/application.mp4" type="video/mp4">
                 </video>
             </div>
             <div class = "desc-text">
-                <h2>One Application</h2>
-                <p>We provide a single application and assessment process for applicants, so you only need to apply once, and can focus on your studies.</p>
+                <h2 data-aos="fade">One Application</h2>
+                <p data-aos="fade" data-aos-delay="200">We provide a single application and assessment process for applicants, so you only need to apply once, and can focus on your studies.</p>
             </div>   
         </div>
         <div class = "desc">
-            <div class = "desc-media">
+            <div class = "desc-media" data-aos="fade" data-aos-delay="600">
                 <video autoplay loop muted playsinline preload="none">
                     <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
                     <source src="assets/company.mp4" type="video/mp4">
                 </video>
             </div>
             <div class = "desc-text">
-                <h2>Exclusive Companies</h2>
-                <p>We aim to secure exclusive links to companies, so we can provide you with unique roles only available at Internly!</p>
+                <h2 data-aos="fade">Exclusive Companies</h2>
+                <p data-aos="fade" data-aos-delay="200">We aim to secure exclusive links to companies, so we can provide you with unique roles only available at Internly!</p>
             </div>   
         </div>
         <div class = "desc">
-            <div class = "desc-media">
+            <div class = "desc-media" data-aos="fade" data-aos-delay="600">
                 <video autoplay loop muted playsinline preload="none">
                     <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
                     <source src="assets/creditCard.mp4" type="video/mp4">
                 </video>
             </div>
             <div class = "desc-text">
-                <h2>Free For Students</h2>
-                <p>Our aim is to make internship more accessible to students, so adding a cost to you wouldn’t make sense!</p>
+                <h2 data-aos="fade">Free For Students</h2>
+                <p data-aos="fade" data-aos-delay="200">Our aim is to make internship more accessible to students, so adding a cost to you wouldn’t make sense!</p>
             </div>   
         </div>
         <div class = "desc" id = "descn">
-            <div class = "desc-media">
+            <div class = "desc-media" data-aos="fade" data-aos-delay="600">
                 <video autoplay loop muted playsinline preload="none">
                     <source src="/assets/images/frontpage/coin_3.webm" type="video/webm">
                     <source src="assets/gradHat.mp4" type="video/mp4">
                 </video>
             </div>
             <div class = "desc-text">
-                <h2>Built by Students for Students</h2>
-                <p>Being students ourselves, we understand the current process and it's flaws. We created Internly to make life easier for students.</p>
+                <h2 data-aos="fade">Built by Students for Students</h2>
+                <p data-aos="fade" data-aos-delay="200">Being students ourselves, we understand the current process and it's flaws. We created Internly to make life easier for students.</p>
             </div>   
         </div>
     </section>
@@ -192,9 +195,9 @@
             </div>
         </div>-->
         <div class = "early-inner-wrapper" id = "early-inner-wrapper-1">
-            <h1><span class = "get">Get</span><br>early<br><span class = "access">access!</span></h1>
-            <p>Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
-            <div class = "subscribe-form">
+            <h1 data-aos="fade"><span class = "get">Get</span><br>early<br><span class = "access">access!</span></h1>
+            <p data-aos="fade" data-aos-delay="200">Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
+            <div class = "subscribe-form" data-aos="fade" data-aos-delay="400">
                 <div class = "btn btn-white" onclick = "formSubmit()">
                     <h6>Submit</h6>
                 </div>
@@ -244,7 +247,7 @@
             </div>
         </div>                 
     </section>
-    <section id = "recruit">
+    <section id = "recruit" data-aos="fade">
         <div class = "recruit-inner">
             <h3>Are you looking to recruit interns?</h3>
             <div class = "recruit-contact">
@@ -320,4 +323,26 @@
         $("#early-inner-wrapper-1").css("pointer-events", "none");
         $("#early-inner-wrapper-2").css("opacity", "1");
     }
+
+    AOS.init({
+        duration:500,
+        easing: "my-easing",
+        once:true
+    });
+
+    /*$(document).ready(function() {
+        $("a").click(function(event){
+            event.preventDefault();
+            redirectLink = this.href;
+            //$("html").addClass('wf-next').removeClass('wf-active wf-inactive wf-loading');
+            burgerToggle( $("#burger") );
+            setTimeout(function(){
+                redirectToLink(redirectLink);
+            }, 1000);
+        });
+
+        function redirectToLink(url) {
+            window.location = url;
+        }
+    });*/
 </script>

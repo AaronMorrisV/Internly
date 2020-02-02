@@ -8,6 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Internly</title>
 </head>
 <body>
@@ -32,9 +35,9 @@
     <section id = "mobile-navigation-overlay" class = "mobile-navigation-overlay">
         <div class = "mobile-nav-left">
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" style = "opacity:0.5">Home</a></li>
                 <!--<li><a href = "#">For Students</a></li>-->
-                <li><a href = "contact.html" style = "opacity:0.5">Contact</a></li>
+                <li><a href = "contact.html">Contact</a></li>
             </ul>
         </div>
         <div class = "mobile-nav-right">
@@ -47,20 +50,20 @@
     </section>
     <section id = "contact">
         <div class = "contact-left">
-            <h2>Contact Us</h2>
-            <p>Whether you're a business wanted to get involed or ask a question, a students who wants to find out more, or you simply wanted to get to know us better, please contact us, we're always happy to discuss!</p>
-            <h5>hello@internly.co.uk</h5>
+            <h2 data-aos = "fade">Contact Us</h2>
+            <p data-aos = "fade" data-aos-delay="300">Whether you're a business wanted to get involed or ask a question, a students who wants to find out more, or you simply wanted to get to know us better, please contact us, we're always happy to discuss!</p>
+            <h5 data-aos = "fade" data-aos-delay="600">hello@internly.co.uk</h5>
         </div>
         <div class = "contact-right">
-            <h3>Send Us a Message</h3>
+            <h3 data-aos = "fade" data-aos-delay="900">Send Us a Message</h3>
             <form>
-                <input type = "text" id = "firstname" placeholder = "First Name *">
-                <input type = "text" id = "surname" placeholder = "Surname *">
-                <input type = "text" id = "email" placeholder = "Email *">
-                <input type = "text" id = "company-name" placeholder = "Company Name">
-                <textarea id = "message" name = "message" placeholder = "How can we help you?*"></textarea>
+                <input type = "text" id = "firstname" placeholder = "First Name *" data-aos = "fade-up" data-aos-delay="1000">
+                <input type = "text" id = "surname" placeholder = "Surname *" data-aos = "fade-up" data-aos-delay="1100">
+                <input type = "text" id = "email" placeholder = "Email *" data-aos = "fade-up" data-aos-delay="1200">
+                <input type = "text" id = "company-name" placeholder = "Company Name" data-aos = "fade-up" data-aos-delay="1300">
+                <textarea id = "message" name = "message" placeholder = "How can we help you?*" data-aos = "fade-up" data-aos-delay="1400"></textarea>
             </form>
-            <div class = "btn btn-pink">
+            <div class = "btn btn-pink" data-aos = "fade" data-aos-delay="1600">
                 <h6>Send Message</h6>
             </div>
             <div class = "spacer"></div>
@@ -123,4 +126,25 @@
             }, 850);
         }
     }
+    AOS.init({
+        duration:500,
+        easing: "my-easing",
+        once:true
+    });
+
+    
+    $(document).ready(function() {
+        $("a").click(function(event){
+        event.preventDefault();
+        redirectLink = this.href;
+        $("html").addClass('wf-next').removeClass('wf-active wf-inactive wf-loading');
+        setTimeout(function(){
+            redirectToLink(redirectLink);
+        }, 1000);
+        });
+
+        function redirectToLink(url) {
+            window.location = url;
+        }
+    });
 </script>
