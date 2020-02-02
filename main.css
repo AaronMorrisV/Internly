@@ -211,8 +211,6 @@ header {
   display: -ms-grid;
   display: grid;
   z-index: 5; }
-  .mobile-navigation-overlay .mobi {
-    background-color: red; }
   .mobile-navigation-overlay .mobile-nav-left {
     background-color: #151515;
     height: 0%;

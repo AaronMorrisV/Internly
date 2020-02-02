@@ -220,12 +220,7 @@ header{
 }
 
 .mobile-navigation-overlay{
-    .mobi{
-        background-color: red;
-    }
     pointer-events: none;
-    
-    //background-color: $dark;
     height:100%;
     width:100vw;
     overflow-x: hidden;
