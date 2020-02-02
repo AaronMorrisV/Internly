@@ -239,8 +239,8 @@ header {
         .mobile-navigation-overlay .mobile-nav-left ul li a {
           text-decoration: none;
           color: white;
-          font-size: 40px;
-          line-height: 60px;
+          font-size: 25px;
+          line-height: 40px;
           -webkit-transition-delay: 2s;
           -o-transition-delay: 2s;
           transition-delay: 2s;
@@ -275,14 +275,14 @@ header {
       grid-template-columns: 1fr 1fr;
       grid-row-gap: 1em; }
       .mobile-navigation-overlay .mobile-nav-right .socials i {
-        font-size: 30px;
+        font-size: 20px;
         cursor: pointer;
         opacity: 0.6;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s; }
       .mobile-navigation-overlay .mobile-nav-right .socials h4 {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 400;
         opacity: 0.6;
         -webkit-transition: 0.3s;
@@ -293,7 +293,6 @@ header {
         grid-column: 1/3; }
 
 .mobile-navigation-overlay-active {
-  opacity: 1;
   pointer-events: auto; }
   .mobile-navigation-overlay-active .mobile-nav-left, .mobile-navigation-overlay-active .mobile-nav-right {
     height: 100%; }

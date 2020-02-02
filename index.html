@@ -301,11 +301,17 @@
         $("#mobile-navigation-overlay").toggleClass("mobile-navigation-overlay-active");
         if(y%2!=0){
             $('body').css("overflow","hidden");
-            console.log("asxyug")
             $("header").addClass("header-active");
+            $("#mobile-navigation-overlay").css("opacity","1");
         }
         else{
             $('body').css("overflow","visible");
+            if($(window).scrollTop() < 200){
+                $("header").removeClass("header-active");
+            }
+            setTimeout(function(){
+                $("#mobile-navigation-overlay").css("opacity","0");
+            }, 850);
         }
     }
     function formSubmit(){
