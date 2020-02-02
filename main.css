@@ -343,11 +343,11 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 150px; }
+  padding-top: 100px; }
   #lander .lander-text {
     width: 80%;
     text-align: center;
-    margin-bottom: 100px; }
+    margin-bottom: 60px; }
     #lander .lander-text h1 {
       font-size: 30px;
       line-height: 36px;
@@ -586,7 +586,11 @@ header {
     letter-spacing: 2px;
     margin-top: 10%;
     text-decoration: none;
-    overflow: hidden; }
+    overflow: hidden;
+    display: none; }
+    @media (min-width: 800px) {
+      #lander .mouse-scroll {
+        display: inline; } }
     #lander .mouse-scroll .mouse {
       position: absolute;
       bottom: 20px;
