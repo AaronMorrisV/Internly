@@ -49,6 +49,10 @@ p{
         font-weight: 500;
         line-height: 36px;
         border-radius: 5px;
+        a{
+            text-decoration:none;
+            color:white;
+        }
     }
 }
 .btn:hover{
@@ -277,6 +281,7 @@ header{
         position: absolute;
         width:50%;
         padding-right: 4px;
+        overflow: hidden;
         ul{
             padding:0;
             position: absolute;
@@ -305,6 +310,7 @@ header{
         position: absolute;
         transition:0.7s cubic-bezier(.94,.09,.37,.78);
         width:50%;
+        overflow: hidden;
         .socials{
             position: absolute;
             top:50%;
@@ -849,7 +855,7 @@ header{
                 transform: rotate(45deg);
             }
             @media(min-width:700px){
-                width:500px;
+                width:600px;
                 grid-template-columns: calc(33% - 0.67em) calc(33% - 0.67em) calc(33% - 0.67em);
                 .checkbox-container{
                     font-size: 14px;

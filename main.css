@@ -44,6 +44,9 @@ p {
     font-weight: 500;
     line-height: 36px;
     border-radius: 5px; }
+    .btn h6 a {
+      text-decoration: none;
+      color: white; }
 
 .btn:hover {
   opacity: 0.8; }
@@ -257,7 +260,8 @@ header {
     top: 0;
     position: absolute;
     width: 50%;
-    padding-right: 4px; }
+    padding-right: 4px;
+    overflow: hidden; }
     .mobile-navigation-overlay .mobile-nav-left ul {
       padding: 0;
       position: absolute;
@@ -289,7 +293,8 @@ header {
     -webkit-transition: 0.7s cubic-bezier(0.94, 0.09, 0.37, 0.78);
     -o-transition: 0.7s cubic-bezier(0.94, 0.09, 0.37, 0.78);
     transition: 0.7s cubic-bezier(0.94, 0.09, 0.37, 0.78);
-    width: 50%; }
+    width: 50%;
+    overflow: hidden; }
     .mobile-navigation-overlay .mobile-nav-right .socials {
       position: absolute;
       top: 50%;
@@ -793,7 +798,7 @@ header {
         transform: rotate(45deg); }
       @media (min-width: 700px) {
         #early-access #early-inner-wrapper-2 .industries {
-          width: 500px;
+          width: 600px;
           -ms-grid-columns: calc(33% - 0.67em) calc(33% - 0.67em) calc(33% - 0.67em);
           grid-template-columns: calc(33% - 0.67em) calc(33% - 0.67em) calc(33% - 0.67em); }
           #early-access #early-inner-wrapper-2 .industries .checkbox-container {
