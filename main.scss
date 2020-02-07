@@ -697,11 +697,13 @@ header{
       //Mouse stuff ends
 }
 #early-access{
-    height:100vh;
+    min-height:90vh;
+    padding: 5vh 0;
     position:relative;
     background-color:$dark;
     transition:0.5s;
-    overflow: hidden;
+    //overflow: hidden;
+    width:100%;
     .early-inner-wrapper{
         position:absolute;
         top:50%;
@@ -754,97 +756,105 @@ header{
         transition-delay: opacity 0.5s;
         transition: opacity 0.5s;
         opacity:0;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        width:80%;
+        position: relative;
+        //top:50%;
+        //left:50%;
+        //transform: translate(-50%,-50%);
+        width:90%;
+        padding: 0 5%;
+        //background-color: red;
         display: grid;
         justify-items: center;
-        align-items: center;
+        //align-items: center;
+        pointer-events: none;
         p{
             color:white;
             margin-bottom: 20px;
             text-align: center;
         }
         .industries{
+            //background-color: yellow;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 1em;
-            grid-row-gap: 1em;
+            grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
+            grid-column-gap: 0.5em;
+            grid-row-gap: 0.5em;
             width:100%;
             margin-bottom: 30px;
-            @media(min-width:700px){
-                width:400px;
-            }
-        }
-        .checkbox-container {
-            position: relative;
-            padding: 5px 0px;
-            width:100%;
-            //padding-left: 30px;
-            text-align: center;
-            cursor: pointer;
-            font-size: 15px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            background-color: $light-pink;
-            border-radius: 5px;
-            transition: 0.3s;
-            color:white;
-            input {
-                position: absolute;
-                opacity: 0;
+            
+            .checkbox-container {
+                position: relative;
+                padding: 5px 15px;
+                text-align: center;
                 cursor: pointer;
-                height: 0;
-                width: 0;
-                padding-left: -500px;
+                font-size: 12px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-color: $light-pink;
+                border-radius: 5px;
+                transition: 0.3s;
+                color:white;
+                word-wrap: normal;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    //padding-left: -500px;
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    top:50%;
+                    transform:translateY(-50%);
+                    //margin-left: 5px;
+                }
             }
-            .checkmark {
+            .checkbox-container:hover{
+                background-color: $pink;
+            }
+            /*
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+            }*/
+            
+            
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
                 position: absolute;
-                top: 0;
-                left: 0;
-                height: 25px;
-                width: 25px;
-                top:50%;
-                transform:translateY(-50%);
-                //margin-left: 5px;
+                display: none;
             }
-        }
-        .checkbox-container:hover{
-            background-color: $pink;
-        }
-        /*
-        .container:hover input ~ .checkmark {
-            background-color: #ccc;
-        }*/
-        
-        
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        
-        /* Show the checkmark when checked */
-        .checkbox-container input:checked ~ .checkmark:after {
-            display: block;
-        }
-        
-        /* Style the checkmark/indicator */
-        .checkbox-container .checkmark:after {
-            left: 9px;
-            top: 5px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+            
+            /* Show the checkmark when checked */
+            .checkbox-container input:checked ~ .checkmark:after {
+                display: block;
+            }
+            
+            /* Style the checkmark/indicator */
+            .checkbox-container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            @media(min-width:700px){
+                width:500px;
+                grid-template-columns: calc(33% - 0.67em) calc(33% - 0.67em) calc(33% - 0.67em);
+                .checkbox-container{
+                    font-size: 14px;
+                }
+            }
         }
     }
     .background-wrapper{
@@ -860,8 +870,8 @@ header{
             }
         }
     }
+    
     @media (max-width:800px){
-        
         .early-inner-wrapper{
             //padding: 0 $border-small;
             width:calc(100% - 50px);
@@ -897,6 +907,14 @@ header{
                 video{
                     width:80px; 
                 }
+            }
+        }
+    }
+    @media (max-width:500px){
+        .early-inner-wrapper{            
+            h1{
+                font-size: 50px;
+                line-height: 60px;
             }
         }
     }
@@ -1013,9 +1031,15 @@ header{
                 font-size: 16px;
                 line-height: 20px;
             }
-
+            .btn{
+                h6{
+                    a{
+                        text-decoration: none;
+                        color:white;
+                    }
+                }
+            }
         }
-        
     }
     @media(min-width:700px){
         .recruit-inner{
@@ -1053,9 +1077,6 @@ header{
     text-align: center;
 
     .footer-wrapper{
-        //display: grid;
-        //grid-template-columns: 1fr 6fr 1fr;
-
         img{
             width:200px;
             display: block;
@@ -1094,7 +1115,7 @@ header{
 
                 }
                 h4{
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 400;
                     opacity:0.6;
                     transition:0.3s;
@@ -1140,6 +1161,14 @@ header{
             .footer-contact{
                 border:none;
                 padding:0;
+                .socials{
+                    i{
+                        font-size: 20px;
+                    }
+                    h4{
+                        font-size:16px;
+                    }
+                }
             }
         }
     }

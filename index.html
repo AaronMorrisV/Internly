@@ -27,7 +27,7 @@
                 <div class="bar3"></div>
             </div>
             <ul>
-                <li><a href = "index.html" style = "opacity:0.5">Home</a href></li>
+                <li><a href = "index.html" style = "opacity:0.5">Home</a></li>
                 <!--<li><a href = "">For Students</a></li>-->
                 <li><a href ="contact.html">Contact</a></li>
             </ul>
@@ -196,8 +196,8 @@
         </div>-->
         <div class = "early-inner-wrapper" id = "early-inner-wrapper-1">
             <h1 data-aos="fade"><span class = "get">Get</span><br>early<br><span class = "access">access!</span></h1>
-            <p data-aos="fade">Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
-            <div class = "subscribe-form" data-aos="fade">
+            <p>Join our early sign up to get <span>ahead of the game</span> to securing your next internship.</p>
+            <div class = "subscribe-form">
                 <div class = "btn btn-white" onclick = "formSubmit()">
                     <h6>Submit</h6>
                 </div>
@@ -209,7 +209,55 @@
         <div id = "early-inner-wrapper-2">
             <p>Select the industries that you're interested in applying to!</p>
             <div class = "industries">
-                <label class="checkbox-container">Technology
+                <label class="checkbox-container">Accountancy
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Automotive & Transport
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Banking & Finance
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Charity & Public Sector
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Consulting
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Consumer & Retail
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Education
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Energy
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Engineering & Industrial
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">FMCG
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Government Services
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Hospitality
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">HR
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
@@ -217,27 +265,39 @@
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Agriculture
+                <label class="checkbox-container">Marketing & Media
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Finance
+                <label class="checkbox-container">Other Sectors
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Construction
+                <label class="checkbox-container">Pharmaceutical
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Transport
+                <label class="checkbox-container">Property & Construction
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Telecom
+                <label class="checkbox-container">Recruitment
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-container">Engineering
+                <label class="checkbox-container">Sales
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Supply Chain & Logistics
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Technology
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Telecoms
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
@@ -253,7 +313,7 @@
             <div class = "recruit-contact">
                 <p>Contact us to find out more</p>
                 <div class = "btn btn-blue">
-                    <h6>Start Now</h6>
+                    <h6><a href = "contact.html">Start Now</a></h6>
                 </div>
             </div>
         </div>
@@ -321,6 +381,7 @@
         //if this.child[1].child[0] != empty
         $("#early-inner-wrapper-1").css("opacity", "0");
         $("#early-inner-wrapper-1").css("pointer-events", "none");
+        $("#early-inner-wrapper-2").css("pointer-events", "auto");
         $("#early-inner-wrapper-2").css("opacity", "1");
     }
 
